@@ -64,11 +64,11 @@ python run_expt.py --dataset civilcomments --download --algorithm ERM --root_dir
 ```
 
 ### Synthetic Dataset
-- (Case 1 ERM) synthetic/spurious_synthetic.ipynb
-- (Case 2 ERM) synthetic/spurious_synthetic_case2.ipynb
-- (Case 1 PDE) synthetic/spurious_PDE.ipynb
-- (Case 1 Warmup+All) synthetic/spurious_synthetic_warmup+all.ipynb
-  - (Case 1 Warmup+All, no momentum after warmup) synthetic/spurious_synthetic_warmup+all_no_momentum.ipynb
+- [Case 1 ERM](synthetic/spurious_synthetic.ipynb)
+- [Case 2 ERM](synthetic/spurious_synthetic_case2.ipynb)
+- [Case 1 PDE](synthetic/spurious_PDE.ipynb)
+- [Case 1 Warmup+All](synthetic/spurious_synthetic_warmup+all.ipynb)
+  - [Case 1 Warmup+All, no momentum after warmup](synthetic/spurious_synthetic_warmup+all_no_momentum.ipynb)
 
 
 ## Citation
