@@ -48,9 +48,6 @@ wandb login
 Add `--use_wandb` to the command line to enable wandb logging.
 
 ## Usage
-### Synthetic Dataset
-Coming soon
-
 ### Waterbirds Dataset
 ```
 python run_expt.py --dataset waterbirds --download --algorithm ERM --model resnet50 --root_dir data --log_dir ./logs --device 0 --lr 1e-2 --weight_decay 1e-2 --subsample --scheduler MultiStepLR --scheduler_multistep_gamma 0.01 --scheduler_kwargs verbose=True --add_start 140 --add_interval 10 --add_num 10 --batch_size 64 --seed 0
@@ -65,6 +62,14 @@ python run_expt.py --dataset celebA --download --algorithm ERM --model resnet50 
 ```
 python run_expt.py --dataset civilcomments --download --algorithm ERM --root_dir data --log_dir ./logs --device 0 --subsample --n_epochs 108 --subsample_cap 150 --add_start 15 --add_num 300 --add_interval 2 --seed 0
 ```
+
+### Synthetic Dataset
+- (Case 1 ERM) synthetic/spurious_synthetic.ipynb
+- (Case 2 ERM) synthetic/spurious_synthetic_case2.ipynb
+- (Case 1 PDE) synthetic/spurious_PDE.ipynb
+- (Case 1 Warmup+All) synthetic/spurious_synthetic_warmup+all.ipynb
+  - (Case 1 Warmup+All, no momentum after warmup) synthetic/spurious_synthetic_warmup+all_no_momentum.ipynb
+
 
 ## Citation
 If you find this repo useful for your research, please consider citing the paper
