@@ -3,7 +3,7 @@ This is the official implementation of the paper "Robust Learning with Progressi
 
 Authors: Yihe Deng*, Yu Yang*, Baharan Mirzasoleiman, Quanquan Gu (* equal contribution)
 
-[[Paper](https://arxiv.org/abs/2306.04949)] 
+[[Paper](https://arxiv.org/abs/2306.04949)] [[Project page](https://yihedeng9.github.io/pde/)]
 
 ![image](demo.png)
 
