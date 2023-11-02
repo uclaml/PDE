@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Robust Learning with Progressive Data Expansion Against Spurious Correlation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/star.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Robust Learning with Progressive Data Expansion Against Spurious Correlation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://sites.google.com/g.ucla.edu/yihedeng/home" target="_blank">Yihe Deng</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://sites.google.com/g.ucla.edu/yuyang/home" target="_blank">Yu Yang</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://baharanm.github.io/" target="_blank">Baharan Mirzasoleiman</a>,</span>
+                    <span class="author-block">
+                      <a href="https://web.cs.ucla.edu/~qgu/" target="_blank">Quanquan Gu</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">University of California, Los Angeles<br>NeurIPS 2023</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2306.04949.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/uclaml/PDE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2306.04949" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            While deep learning models have shown remarkable performance in various tasks, they are susceptible to learning non-generalizable spurious features rather than the core features that are genuinely correlated to the true label. In this paper, beyond existing analyses of linear models, we theoretically examine the learning process of a two-layer nonlinear convolutional neural network in the presence of spurious features. Our analysis suggests that imbalanced data groups and easily learnable spurious features can lead to the dominance of spurious features during the learning process. In light of this, we propose a new training algorithm called PDE that efficiently enhances the model's robustness for a better worst-group performance. PDE begins with a group-balanced subset of training data and progressively expands it to facilitate the learning of the core features. Experiments on synthetic and real-world benchmark datasets confirm the superior performance of our method on models such as ResNets and Transformers. On average, our method achieves a 2.8% improvement in worst-group accuracy compared with the state-of-the-art method, while enjoying up to 10x faster training efficiency.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/demo.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Overview of the problem, our proposed solution, and the resultant outcomes. We propose Progressive Data Expansion (PDE), a training algorithm that efficiently uses group information to enhance the model's robustness against spurious correlations. PDE begins with a group-balanced subset of training data and progressively expands it to facilitate the learning of the core features. 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">PDE</h2>
+        <div class="content has-text-justified">
+          <p>
+            PDE is a two-stage training algorithm consisting of (1) warm-up and (2) expansion stages. In warm-up stage, we create a fully balanced dataset, in which each group is
+            randomly subsampled to match the size of the smallest group, and consider it as a warm-up dataset. We train the model on the warm-up dataset for a fixed number of epochs. 
+            In the expansion stage, we proceed to train the model by incrementally incorporating new data into the training dataset.  Practically, we consider randomly selecting m 
+            new examples for expansion every J epochs by attempting to draw a similar number of examples from each group. During the last few epochs of the expansion stage, we expect 
+            the newly incorporated data exclusively from the larger group, as the smaller groups have been entirely integrated into the warm-up dataset. 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/alg.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Algorithm of PDE.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Synthetic Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            We consider the two cases in our theory. ERM, whether trained with GD or GD+M, is unable to accurately predict the small group in our specified data distribution for case 1. 
+            Confirming our theory, it rapidly learns the spurious feature as it minimizes the training loss, while barely learning the core feature. 
+            In contrast, PDE significantly improves worst-group accuracy while maintaining overall test accuracy comparable to ERM. PDE allows the model to initially learn the core
+            feature using the warm-up dataset and continue learning when incorporating new data.
+            Lastly, for case 2, we confirm that the learning of ERM is successful when the data distribution breaks the conditions of our theory: ERM
+            correctly learns the core feature despite the imbalanced group sizes. 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/synthetic.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Synthetic experiments to confirm our theory. When the data is imbalanced and spurious 
+        feature is easier to learn, the model will quickly learn the spurious feature from the 
+        onset of training.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Real Data Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            We conduct experiments on real benchmark datasets to (1) compare our approach with state-of-the-art methods, highlighting its superior performance and efficiency, 
+            and (2) offer insights into the design of our method through ablation studies.
+            Importantly, we emphasize the comparison with GroupDRO, as it represents the best-performing method that utilizes group information. 
+            As shown in Table 2, PDE considerably enhances the worst-performing group's performance across all datasets, while maintaining the average accuracy comparable to GroupDRO. Considering 
+            all methods that only use validation data for model selection, GroupDRO still occasionally fails to surpass other methods. 
+            Remarkably, PDE's performance consistently exceeds them in worst-group accuracy.
+
+            Furthermore, our method is more efficient as it does not train a model twice (as in JTT) and more importantly avoids the necessity for a small learning rate (as in GroupDRO). 
+            GroupDRO trained faster than the default results in significantly poorer performance 
+            similar to ERM. Conversely, PDE can be trained to converge rapidly on the warm-up set and reaches 
+            better worst-group accuracy 10x faster than GroupDRO at default. Note that methods which only 
+            finetune the last layer (DFR) are also efficient. However, they still 
+            require training a model first using ERM on the entire training data till convergence. In contrast, PDE 
+            does not require further finetuning of the model.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/main_result.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+         Main result. PDE considerably enhances the worst-performing group's performance across all 
+         datasets, while maintaining the average accuracy comparable to GroupDRO.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/efficiency.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Efficiency comparison between PDE and GroupDRO. GroupDRO trained faster than the default 
+        results in significantly poorer performance similar to ERM. Conversely, PDE can be trained 
+        to converge rapidly on the warm-up set and reaches better worst-group accuracy 10x faster 
+        than GroupDRO at default.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{robust2023deng,
+        title={Robust Learning with Progressive Data Expansion Against Spurious Correlation},
+        author={Deng, Yihe and Yang, Yu and Mirzasoleiman, Baharan and Gu, Quanquan},
+        booktitle={Advances in Neural Information Processing Systems},
+        year={2023}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
